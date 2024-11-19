@@ -8,6 +8,7 @@ import { Bishop } from "./pieces/Bishop";
 import { Queen } from "./pieces/Queen";
 import { King } from "./pieces/King";
 import { CameraControls, SoftShadows } from "@react-three/drei";
+import Piece from "./pieces/Piece";
 
 function App() {
   return (
@@ -46,42 +47,106 @@ function App() {
           </directionalLight>
 
           {/* Black pieces */}
-          <Pawn position={boardLocationToPosition("a7")} color="black" />
-          <Pawn position={boardLocationToPosition("b7")} color="black" />
-          <Pawn position={boardLocationToPosition("c7")} color="black" />
-          <Pawn position={boardLocationToPosition("d7")} color="black" />
-          <Pawn position={boardLocationToPosition("e7")} color="black" />
-          <Pawn position={boardLocationToPosition("f7")} color="black" />
-          <Pawn position={boardLocationToPosition("g7")} color="black" />
-          <Pawn position={boardLocationToPosition("h7")} color="black" />
+          <Piece position={boardLocationToPosition("a7")}>
+            <Pawn color="black" />
+          </Piece>
+          <Piece position={boardLocationToPosition("b7")}>
+            <Pawn color="black" />
+          </Piece>
+          <Piece position={boardLocationToPosition("c7")}>
+            <Pawn color="black" />
+          </Piece>
+          <Piece position={boardLocationToPosition("d7")}>
+            <Pawn color="black" />
+          </Piece>
+          <Piece position={boardLocationToPosition("e7")}>
+            <Pawn color="black" />
+          </Piece>
+          <Piece position={boardLocationToPosition("f7")}>
+            <Pawn color="black" />
+          </Piece>
+          <Piece position={boardLocationToPosition("g7")}>
+            <Pawn color="black" />
+          </Piece>
+          <Piece position={boardLocationToPosition("h7")}>
+            <Pawn color="black" />
+          </Piece>
 
-          <Rook position={boardLocationToPosition("a8")} color="black" />
-          <Knight position={boardLocationToPosition("b8")} color="black" />
-          <Bishop position={boardLocationToPosition("c8")} color="black" />
-          <King position={boardLocationToPosition("d8")} color="black" />
-          <Queen position={boardLocationToPosition("e8")} color="black" />
-          <Bishop position={boardLocationToPosition("f8")} color="black" />
-          <Knight position={boardLocationToPosition("g8")} color="black" />
-          <Rook position={boardLocationToPosition("h8")} color="black" />
+          <Piece position={boardLocationToPosition("a8")}>
+            <Rook color="black" />
+          </Piece>
+          <Piece position={boardLocationToPosition("b8")}>
+            <Knight color="black" />
+          </Piece>
+          <Piece position={boardLocationToPosition("c8")}>
+            <Bishop color="black" />
+          </Piece>
+          <Piece position={boardLocationToPosition("d8")}>
+            <King color="black" />
+          </Piece>
+          <Piece position={boardLocationToPosition("e8")}>
+            <Queen color="black" />
+          </Piece>
+          <Piece position={boardLocationToPosition("f8")}>
+            <Bishop color="black" />
+          </Piece>
+          <Piece position={boardLocationToPosition("g8")}>
+            <Knight color="black" />
+          </Piece>
+          <Piece position={boardLocationToPosition("h8")}>
+            <Rook color="black" />
+          </Piece>
 
           {/* White pieces */}
-          <Pawn position={boardLocationToPosition("a2")} color="white" />
-          <Pawn position={boardLocationToPosition("b2")} color="white" />
-          <Pawn position={boardLocationToPosition("c2")} color="white" />
-          <Pawn position={boardLocationToPosition("d2")} color="white" />
-          <Pawn position={boardLocationToPosition("e2")} color="white" />
-          <Pawn position={boardLocationToPosition("f2")} color="white" />
-          <Pawn position={boardLocationToPosition("g2")} color="white" />
-          <Pawn position={boardLocationToPosition("h2")} color="white" />
+          <Piece position={boardLocationToPosition("a2")}>
+            <Pawn color="white" />
+          </Piece>
+          <Piece position={boardLocationToPosition("b2")}>
+            <Pawn color="white" />
+          </Piece>
+          <Piece position={boardLocationToPosition("c2")}>
+            <Pawn color="white" />
+          </Piece>
+          <Piece position={boardLocationToPosition("d2")}>
+            <Pawn color="white" />
+          </Piece>
+          <Piece position={boardLocationToPosition("e2")}>
+            <Pawn color="white" />
+          </Piece>
+          <Piece position={boardLocationToPosition("f2")}>
+            <Pawn color="white" />
+          </Piece>
+          <Piece position={boardLocationToPosition("g2")}>
+            <Pawn color="white" />
+          </Piece>
+          <Piece position={boardLocationToPosition("h2")}>
+            <Pawn color="white" />
+          </Piece>
 
-          <Rook position={boardLocationToPosition("a1")} color="white" />
-          <Knight position={boardLocationToPosition("b1")} color="white" />
-          <Bishop position={boardLocationToPosition("c1")} color="white" />
-          <King position={boardLocationToPosition("d1")} color="white" />
-          <Queen position={boardLocationToPosition("e1")} color="white" />
-          <Bishop position={boardLocationToPosition("f1")} color="white" />
-          <Knight position={boardLocationToPosition("g1")} color="white" />
-          <Rook position={boardLocationToPosition("h1")} color="white" />
+          <Piece position={boardLocationToPosition("a1")}>
+            <Rook color="white" />
+          </Piece>
+          <Piece position={boardLocationToPosition("b1")}>
+            <Knight color="white" />
+          </Piece>
+          <Piece position={boardLocationToPosition("c1")}>
+            <Bishop color="white" />
+          </Piece>
+          <Piece position={boardLocationToPosition("d1")}>
+            <King color="white" />
+          </Piece>
+          <Piece position={boardLocationToPosition("e1")}>
+            <Queen color="white" />
+          </Piece>
+          <Piece position={boardLocationToPosition("f1")}>
+            <Bishop color="white" />
+          </Piece>
+          <Piece position={boardLocationToPosition("g1")}>
+            <Knight color="white" />
+          </Piece>
+          <Piece position={boardLocationToPosition("h1")}>
+            <Rook color="white" />
+          </Piece>
 
           <mesh
             rotation={[-Math.PI / 2, 0, 0]}
@@ -98,9 +163,6 @@ function App() {
         </Canvas>
       </div>
 
-      <div className="w-[300px] p-4 rounded-l-lg bg-white shadow-black">
-        <h1>Hello!</h1>
-      </div>
     </div>
   );
 }
